@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>熊猫商城</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/banner.css" />
+		<link rel="stylesheet" type="text/css" href="css/content.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="css/fixedDiv.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="js/public.js"></script>
+		<script src="js/banner.js"></script>
+	</head>
+	<body>
+		<!-- 顶部，包括搜索框 -->
+		<div class="public-header">
+			<div class="public-header-top">
+				<div class="public-wrap">
+					<div class="p-h-top">
+						<span>欢迎来到熊猫商城</span>
+						<a class="login" href="login.html">请登录</a>
+						<a class="register" href="register.html">免费注册</a>
+						<ul>
+							<li><a href="#0">手机版</a></li>
+							<li><a href="#0">商家支持</a></li>
+							<li><a href="#0">购物车</a></li>
+							<li><a href="#0">收藏夹</a></li>
+							<li><a href="#0">会员中心</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="public-header-centent">
+				<div class="public-wrap">
+					<div class="logo"><a href="#8"></a></div>
+					<div class="search">
+						<input type="text" placeholder="搜索&nbsp;&nbsp;商品/品牌/店铺" required="">
+						<a href="#0">搜索</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 分类导航 -->
+		<div class="public-nav">
+			<div class="public-wrap">
+				<span class="link">商品分类</span>
+				<a href="#8" class="link">国际商城</a>
+				<a href="#8" class="link">会员特价</a>
+				<a href="#8" class="link">生活超市</a>
+				<a href="#8" class="link">数码城</a>
+				<a href="#8" class="link">电器城</a>
+				<a href="#8" class="link">营业厅</a>
+			</div>
+		</div>
+		<!-- 轮播图 -->
+		<div class="public-banner">
+			<div class="main" id="main">
+				<div class="menu-box">
+				</div>
+				<!--内容-->
+				<div class="sub-menu hide" id="sub-menu" style="display: none;">
+					<div class="inner-box" style="display: none;">
+						<div class="sub-inner-box">
+							<div class="title">手机、配件</div>
+							<div class="sub-row">
+								<span class="bold mr10">手机通讯：</span>
+								<a href="">手机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">手机维修</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">以旧换新</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">手机配件：</span>
+								<a href="">手机壳</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">手机存储卡</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">数据线</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">充电器</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">电池</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">运营商：</span>
+								<a href="">中国联通</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">中国移动</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">中国电信</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">智能设备：</span>
+								<a href="">智能手环</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">智能家居</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">智能手表</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">其他配件</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">娱乐：</span>
+								<a href="">耳机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">音响</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">收音机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">麦克风</a>
+							</div>
+						</div>
+					</div>
+					<div class="inner-box" style="display: none;">
+						<div class="sub-inner-box">
+							<div class="title">电脑</div>
+							<div class="sub-row">
+								<span class="bold mr10">电脑：</span>
+								<a href="">笔记本</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">平板</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">一体机</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">电脑配件：</span>
+								<a href="">显示器</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">CPU</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">主板</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">硬盘</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">电源</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">显卡</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">其他配件</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">游戏设备：</span>
+								<a href="">游戏机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">耳机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">游戏软件</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">网络产品：</span>
+								<a href="">路由器</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">网络机顶盒</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">交换机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">存储卡</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">网卡</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">外部产品：</span>
+								<a href="">鼠标</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">键盘</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">U盘</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">移动硬盘</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">鼠标垫</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">电脑清洁</a>
+							</div>
+						</div>
+					</div>
+					<div class="inner-box" style="display: none;">
+						<div class="sub-inner-box">
+							<div class="title">家用电器</div>
+							<div class="sub-row">
+								<span class="bold mr10">电视：</span>
+								<a href="">国产品牌</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">韩国品牌</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">欧美品牌</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">空调：</span>
+								<a href="">显示器</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">柜式</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">中央</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">壁挂式</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">冰箱：</span>
+								<a href="">多门</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">对开门</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">三门</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">双门</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">洗衣机：</span>
+								<a href="">滚筒式洗衣机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">迷你洗衣机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">洗烘一体机</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">厨房电器：</span>
+								<a href="">油烟机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">洗碗机</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">燃气灶</a>
+							</div>
+						</div>
+					</div>
+					<div class="inner-box" style="display: none;">
+						<div class="sub-inner-box">
+							<div class="title">家具</div>
+							<div class="sub-row">
+								<span class="bold mr10">家纺：</span>
+								<a href="">被子</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">枕头</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">四件套</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">床垫</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">灯具：</span>
+								<a href="">台灯</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">顶灯</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">节能灯</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">应急灯</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">厨具：</span>
+								<a href="">烹饪锅具</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">餐具</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">菜板刀具</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">家装：</span>
+								<a href="">地毯</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">沙发垫套</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">装饰字画</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">照片墙</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">窗帘</a>
+							</div>
+							<div class="sub-row">
+								<span class="bold mr10">生活日用：</span>
+								<a href="">收纳用品</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">浴室用品</a>
+								<span class="ml10 mr10">/</span>
+								<a href="">雨伞雨衣</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 菜单 -->
+				<div class="menu" id="menu">
+					<div class="menu-item" data-index="0" style="background: none;">
+						<a href="">
+							<span>手机、配件</span>
+							<i class="icon"></i>
+						</a>
+					</div>
+					<div class="menu-item" data-index="1" style="background: none;">
+						<a href="">
+							<span>电脑、配件</span>
+							<i class="icon"></i>
+						</a>
+					</div>
+					<div class="menu-item" data-index="2" style="background: none;">
+						<a href="">
+							<span>家用电器</span>
+							<i class="icon"></i>
+						</a>
+					</div>
+					<div class="menu-item" data-index="3" style="background: none;">
+						<a href="">
+							<span>家具</span>
+							<i class="icon"></i>
+						</a>
+					</div>
+				</div>
+				<div class="banner" id="banner">
+					<a href="">
+						<div class="banner-slide slide1" style="display: block;"></div>
+					</a>
+					<a href="">
+						<div class="banner-slide slide2" style="display: none;"></div>
+					</a>
+					<a href="">
+						<div class="banner-slide slide3" style="display: none;"></div>
+					</a>
+					<a href="javascript:void(0)" class="button prev" id="prev"></a>
+					<a href="javascript:void(0)" class="button next" id="next"></a>
+				</div>
+				<div class="dots" id="dots">
+					<span class="active" id="0"></span>
+					<span id="1" class=""></span>
+					<span id="2" class=""></span>
+				</div>
+			</div>
+		</div>
+		<!-- 中间内容区域 -->
+		<div class="public-content">
+			<div class="public-wrap">
+				<div class="public-content-top">
+					<div class="header">
+						<img src="img/content-top-heander.png" />
+					</div>
+
+					<div class="clearfix centent">
+						<a href="#8"> <img src="img/public-content-top1.jpg" /></a>
+						<a href="#8"> <img src="img/public-content-top2.jpg" /></a>
+						<a href="#8"> <img src="img/public-content-top3.jpg" /></a>
+						<a href="#8"> <img src="img/public-content-top4.jpg" /></a>
+						<a href="#8"> <img src="img/public-content-top5.jpg" /></a>
+					</div>
+
+				</div>
+				<div class="public-content-center">
+					<div class="clearfix p-content-c-h">
+						<div class=" International-stores-h">
+							<span>国际商城</span>
+							<a href="#8">口红</a>
+							<a href="#8">面膜</a>
+							<a href="#8">奶粉</a>
+							<a href="#8">箱包</a>
+						</div>
+						<ul class="list-item">
+							<li><a href="#8"> <img src="img/International-stores1.jpg" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores1-1.png" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores1-1.png" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores1-1.png" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores1-1.png" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores2.jpg" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores2-1.jpg" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores2-1.jpg" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores2-1.jpg" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores2-1.jpg" /></a></li>
+
+						</ul>
+					</div>
+
+					<div class="clearfix p-content-c-c">
+						<div class=" International-stores-h">
+							<span style="background: #F70538;">会员特价</span>
+							<a href="#8">优购</a>
+							<a href="#8">活动</a>
+							<a href="#8">名品</a>
+						</div>
+						<ul class="list-item">
+							<li><a href="#8"> <img src="img/viptejia.jpg" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores1-1.png" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores1-1.png" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores1-1.png" /></a></li>
+							<li><a href="#8"> <img src="img/International-stores1-1.png" /></a></li>
+
+						</ul>
+					</div>
+
+					<div class="clearfix p-content-c-f">
+						<div class="Supermarket">
+							<div class=" International-stores-h">
+								<span style="background: #00B262;">生活超市</span>
+								<a href="#8">饮料</a>
+								<a href="#8">粮油</a>
+								<a href="#8">洗护</a>
+								<a href="#8">家居</a>
+								<a href="#8">清洁</a>
+								<a href="#8">母婴</a>
+								<a href="#8">水果</a>
+							</div>
+							<div class="International-stores-left">
+								<a href="#8">
+									<img class="stores-left-img" src="img/International-stores-left.png">
+									<div class="left-banner">
+										<div class="left-title-centent">
+											<span class="left-title">生活超市</span>
+										</div>
+										<div class="right-title-centent">
+											<div class="right-title-absolute">
+												<span class="right-title">超市国货日</span>
+												<span class="right-title">全场8.8折</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="div-floor-arrow">
+										<img class="floor-arrow" src="img/floor-arrow.png">
+									</div>
+
+								</a>
+
+							</div>
+							<div class="clearfix International-stores-right">
+								<div class=" stores-right-top">
+									<a class="right-banner" href="#8"> <img src="img/left-banner.png" /></a>
+									<ul class=" top-ul">
+										<li class="item"><a href="#8"> <img src="img/chaoshimiaosha.jpg" /></a></li>
+										<li class="item"><a href="#8"> <img src="img/chaoshimiaosha.jpg" /></a></li>
+										<li class="item"><a href="#8"> <img src="img/chaoshimiaosha.jpg" /></a></li>
+										<li class="item"><a href="#8"> <img src="img/chaoshimiaosha.jpg" /></a></li>
+									</ul>
+
+								</div>
+								<div class=" stores-right-bottom">
+									<a class="left-banner" href="#8"> <img src="img/right-banner.jpg" /></a>
+									<ul class=" bottom-ul">
+										<li class="item"><a href="#8"> <img src="img/manjian.jpg" /></a></li>
+										<li class="item"><a href="#8"> <img src="img/manjian.jpg" /></a></li>
+										<li class="item"><a href="#8"> <img src="img/manjian.jpg" /></a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="public-wrap">
+							<a class="ad-banner" href="#8"><img class="ad-img" src="img/ad1.jpg" /></a>
+						</div>
+						<div class="brand">
+							<div class=" International-stores-h">
+								<span style="background: #207B8D;">潮电酷玩</span>
+							</div>
+							<div class="clearfix brand-header">
+								<div class="left">
+									<a href="#8"> <img src="img/shouji1.jpg" /></a>
+									<a href="#8"> <img src="img/shouji2.jpg" /></a>
+								</div>
+								<div class="middle">
+									<a href="#8">
+										<div class="box">
+											<span class="box_title">新品首发</span>
+											<i class="box_arrow"></i>
+											<span class="box_subtit">目前性价比最高的骁龙855手机</span>
+										</div>
+										<img class="Newproducts" src="img/New%20products.jpg">
+									</a>
+								</div>
+								<div class="right">
+									<a href="#8"> <img src="img/shouji3.jpg" /></a>
+									<a href="#8"> <img src="img/shouji4.jpg" /></a>
+								</div>
+							</div>
+							<div class="clearfix brand-list">
+								<ul>
+									<li class="item"><a href="#8"> <img src="img/xiaomi.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/xiaomi.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/xiaomi.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/xiaomi.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/xiaomi.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/hp.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/hp.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/hp.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/hp.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/hp.png" /></a></li>
+
+									<li class="item"><a href="#8"> <img src="img/honor.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/honor.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/honor.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/honor.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/honor.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/Lenovo.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/Lenovo.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/Lenovo.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/Lenovo.png" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/Lenovo.png" /></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="public-wrap">
+							<a class="ad-banner" href="#8"><img class="ad-img" src="img/ad2.jpg" /></a>
+						</div>
+						<div class="clearfix household-electrical-appliances">
+							<div class=" International-stores-h">
+								<span style="background: #333333;">生活电器</span>
+							</div>
+							<div class="household-e-a-left">
+								<a class="dianqi" href="#8">
+									<img class="stores-left-img" src="img/meide.jpg">
+									<div class="left-banner">
+										<div class="left-title-centent">
+											<span class="left-title">全场八折</span>
+										</div>
+										<div class="right-title-centent">
+											<div class="right-title-absolute">
+												<span class="right-title">美的大牌日</span>
+												<span class="right-title">优惠超级多</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="div-floor-arrow">
+										<img class="floor-arrow" src="img/floor-arrow.png">
+									</div>
+
+								</a>
+
+							</div>
+							<div class="household-electrical-appliances-right">
+								<ul class="clearfix list-ul">
+									<li class="item"><a href="#8"> <img src="img/dianqi1.jpg" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/dianqi1.jpg" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/dianqi1.jpg" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/dianqi1.jpg" /></a></li>
+
+									<li class="item"><a href="#8"> <img src="img/dianqi1.jpg" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/dianqi1.jpg" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/dianqi1.jpg" /></a></li>
+									<li class="item"><a href="#8"> <img src="img/dianqi1.jpg" /></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部信息 -->
+		<div class="public-footer">
+			<div class="top">
+				<div class="clearfix public-wrap">
+					<div class="footer-col">
+						<h3>购物指南</h3>
+						<a href="">购物流程</a>
+						<a href="">会员介绍</a>
+						<a href="">常见问题</a>
+						<a href="">话费充值</a>
+					</div>
+					<div class="footer-col">
+						<h3>售后保障</h3>
+						<a href="">发票保障</a>
+						<a href="">售后政策</a>
+						<a href="">价格保护</a>
+						<a href="">退款说明</a>
+					</div>
+					<div class="footer-col">
+						<h3>支付方式</h3>
+						<a href="">货到付款</a>
+						<a href="">在线支付</a>
+						<a href="">分期付款</a>
+						<a href="">公司转账</a>
+					</div>
+					<div class="footer-col">
+						<h3>商家服务</h3>
+						<a href="">商家规则</a>
+						<a href="">商家入驻</a>
+						<a href="">商家中心</a>
+						<a href="">运营服务</a>
+					</div>
+					<div class="footer-col">
+						<h3>手机APP下载</h3>
+						<div></div>
+
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="public-wrap">
+
+					<div class="footer-copyright">
+						<div class="friendship-link">
+							<a href="">淘宝</a>
+							<span>|</span>
+							<a href="">京东</a>
+							<span>|</span>
+							<a href="">天猫</a>
+							<span>|</span>
+							<a href="">苏宁易购</a>
+							<span>|</span>
+							<a href="">国美</a>
+							<span>|</span>
+							<a href="">聚划算</a>
+							<span>|</span>
+							<a href="">小红书</a>
+							<span>|</span>
+							<a href="">网易考拉</a>
+							<span>|</span>
+							<a href="">拼多多</a>
+						</div>
+						<span class="copyright">©2019&nbsp;版权归熊猫商城所有</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 顶部搜索框 -->
+		<div class="fix-search">
+			<div class="public-wrap">
+				<div class="s-logo"><a href="#8"></a></div>
+				<div class="search">
+					<input type="text" placeholder="搜索&nbsp;&nbsp;商品/品牌/店铺" required="">
+					<a href="#0">搜索</a>
+				</div>
+			</div>
+		</div>
+		<!-- 侧边栏 -->
+		<div class="toolbar">
+			<a href="#8" class="toolbar-item toolbar-ShoppingCart"></a>
+			<a href="#8" class="toolbar-item toolbar-CustomerService"></a>
+			<a href="#8" class="toolbar-item toolbar-app">
+				<span class="toolbar-layer"></span>
+			</a>
+			<a href="#8" id="back-top" class="toolbar-item toolbar-backTop"></a>
+
+		</div>
+		<!-- 左侧导航 -->
+		<div class="fixed-position">
+			<div id="fixed-left" class="fixed-left">
+				<ul>
+					<li class="">国际商城</li>
+					<li class="">会员特价</li>
+					<li class="">生活超市</li>
+					<li class="">酷电潮玩</li>
+					<li class="">生活电器</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>
