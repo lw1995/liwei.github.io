@@ -9,9 +9,12 @@
 		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<link rel="stylesheet" type="text/css" href="css/footer.css" />
 		<link rel="stylesheet" type="text/css" href="css/fixedDiv.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
 		<script src="js/public.js"></script>
 		<script src="js/banner.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
 	</head>
 	<body>
 		<!-- 顶部，包括搜索框 -->
@@ -23,11 +26,27 @@
 						<a class="login" href="login.html">请登录</a>
 						<a class="register" href="register.html">免费注册</a>
 						<ul>
+							<li style="position: relative;"><a class="touxiang" href="#777"><img class="touxiang_img" src="img/touxiang.jpg"
+									 alt=""></a>
+								<div class="user_panel" id="user_panel">
+									<div class="user_content">
+										<div class="user_top">
+											<a href="javascript:void(0)">
+												<img src="img/touxiang.jpg">
+											</a>
+											<div>张小三</div>
+										</div>
+										<div class="user_footer" style="margin-top: 15px;cursor: pointer;">
+											退出登录
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#0">会员中心</a></li>
 							<li><a href="#0">手机版</a></li>
 							<li><a href="#0">商家支持</a></li>
 							<li><a href="#0">购物车</a></li>
 							<li><a href="#0">收藏夹</a></li>
-							<li><a href="#0">会员中心</a></li>
 
 						</ul>
 					</div>
@@ -36,9 +55,9 @@
 			<div class="public-header-centent">
 				<div class="public-wrap">
 					<div class="logo"><a href="#8"></a></div>
-					<div class="search">
-						<input type="text" placeholder="搜索&nbsp;&nbsp;商品/品牌/店铺" required="">
-						<a href="#0">搜索</a>
+					<div class="search" id="search">
+						<input type="text" placeholder="搜索   商品/品牌/店铺" required="" v-model="search">
+						<a :href="content" v-on:click="search_click">搜索</a>
 					</div>
 				</div>
 			</div>
@@ -641,6 +660,35 @@
 				</ul>
 			</div>
 		</div>
+		<script src="js/user.js"></script>
 
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#search',
+				data: {
+					search: '',
+					content: ''
+				},
+				methods: {
+					search_click: function() {
+						if (this.search.length > 0) {
+							this.content = 'search.html?search=' + this.search;
+						} else {
+							this.content = 'javascript:void(0)';
+						}
+					}
+				}
+			});
+			$(document).keyup(function(event) {
+				if (event.keyCode == 13) {
+					//console.log(1)
+					if (app.search.length > 0) {
+						window.location.href = 'search.html?search=' + app.search;
+					} else {
+						app.content = 'javascript:void(0)';
+					}
+				}
+			});
+		</script>
 	</body>
 </html>

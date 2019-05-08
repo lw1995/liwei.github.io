@@ -4,6 +4,12 @@
 		<meta charset="UTF-8">
 		<title>登录</title>
 		<link rel="stylesheet" type="text/css" href="css/loginRegister.css" />
+		<script src="js/core.js"></script>
+		<script src="js/enc-base64.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	</head>
 	<body>
 		<div class="box">
@@ -18,30 +24,28 @@
 				</div>
 			</div>
 			<div class="bg">
-			<div class="loginBox">
-				<ul class="login-list">
-					<li>邮箱/用户名/已验证手机</li>
-					<li><input type="text" class="login-method"></li>
-					<li class="space15"></li>
-					<li>密码</li>
-					<li><input type="text" class="password"></li>
-					<li class="checklogin">
-						<input type="checkbox" id="login">
-						<label for="login">自动登录</label>
-						<a href="#">忘记密码？</a>
-						<a href="register.html">免费注册</a>
-					</li>
-					<li>
-						<button class="login-btn">登录</button>
-					</li>
-					<li class="space30"></li>
-					<li>使用合作网站账户登录：</li>
-					<li class="logina">
-						<a href="#">QQ</a><span>|</span>
-						<a href="#">微信</a><span>|</span>
-					</li>
-				</ul>
-			</div>
+				<div class="loginBox">
+					<ul class="login-list" id="login">
+						<li>邮箱/用户名/已验证手机</li>
+						<li><input type="text" class="login-method" placeholder="请输入邮箱或手机号码" v-model="username" name="email" required></li>
+						<li class="space15"></li>
+						<li>密码</li>
+						<li><input type="text" class="password" placeholder="请输入密码" v-model="password" name="password" required></li>
+						<li class="checklogin">
+							<a href="#">忘记密码？</a>
+							<a href="register.html">免费注册</a>
+						</li>
+						<li>
+							<button class="login-btn">登录</button>
+						</li>
+						<li class="space30"></li>
+						<li>使用合作网站账户登录：</li>
+						<li class="logina">
+							<a href="#">QQ</a><span>|</span>
+							<a href="#">微信</a><span>|</span>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="hr-25"></div>
 			<div class="footer">
@@ -62,5 +66,7 @@
 
 			</div>
 		</div>
+
+	<script src="js/login.js"></script>
 	</body>
 </html>
