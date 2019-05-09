@@ -7,6 +7,11 @@
 		<link rel="stylesheet" type="text/css" href="css/product.css" />
 		<link rel="stylesheet" type="text/css" href="css/header.css" />
 		<link rel="stylesheet" type="text/css" href="css/loginRegister.css" />
+		<link rel="stylesheet" type="text/css" href="css/loginRegister.css" />
+		<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+		<script src="./js/jquery-3.3.1.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+		
 	</head>
 	<body class="grey">
 		<div class="box">
@@ -18,11 +23,27 @@
 							<a class="login" href="login.html">请登录</a>
 							<a class="register" href="register.html">免费注册</a>
 							<ul>
+								<li style="position: relative;"><a class="touxiang" href="#777"><img class="touxiang_img" src="img/touxiang.jpg"
+										 alt=""></a>
+									<div class="user_panel" id="user_panel">
+										<div class="user_content">
+											<div class="user_top">
+												<a href="javascript:void(0)">
+													<img src="img/touxiang.jpg">
+												</a>
+												<div>张小三</div>
+											</div>
+											<div class="user_footer" style="margin-top: 15px;cursor: pointer;">
+												退出登录
+											</div>
+										</div>
+									</div>
+								</li>
+								<li><a href="#0">会员中心</a></li>
 								<li><a href="#0">手机版</a></li>
 								<li><a href="#0">商家支持</a></li>
 								<li><a href="#0">购物车</a></li>
 								<li><a href="#0">收藏夹</a></li>
-								<li><a href="#0">会员中心</a></li>
 
 							</ul>
 						</div>
@@ -66,37 +87,45 @@
 			</div>
 			<!--商品描述-->
 			<div class="description-info comWidth">
-				<div class="description clearfix">
+				<div class="description clearfix" id="description">
 					<div class="leftArea">
 						<div class="description-imgs">
-							<div class="big">
-								<img src="img/big_img.png" alt="MD531CH/A">
+							<div class="big" id="big">
+								<div class="small_img" id="small_img">
+									<img :src="details.Pic" alt="MD531CH/A">
+									<div class="mask"></div>
+								</div>
+
+								<div class="fangdajing">
+									<img :src="details.Pic" alt="">
+								</div>
 							</div>
+
 							<ul class="small clearfix">
 								<li>
-									<a href="#"><img src="img/sm-img.jpg" class="active" alt=""></a>
+									<a href="#"><img :src="details.Pic" class="active" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="img/sm-img.jpg" alt=""></a>
+									<a href="#"><img :src="details.Pic" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="img/sm-img.jpg" alt=""></a>
+									<a href="#"><img :src="details.Pic" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="img/sm-img.jpg" alt=""></a>
+									<a href="#"><img :src="details.Pic" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="img/sm-img.jpg" alt=""></a>
+									<a href="#"><img :src="details.Pic" alt=""></a>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="rightArea">
 						<div class="des-content">
-							<h3>Apple/苹果 iPhone XS</h3>
+							<h3>{{details.Title}}</h3>
 							<div class="dl clearfix">
 								<div class="dt">价格</div>
-								<div class="dd"><span class="des-money"><span>￥</span>8199.00-11399.00</span></div>
+								<div class="dd"><span class="des-money"><span>￥</span>{{details.Price}}</span></div>
 							</div>
 							<div class="dl clearfix">
 								<div class="dt">优惠</div>
@@ -131,11 +160,11 @@
 									<div class="dd clearfix des-number">
 										<div class="reduction">-</div>
 										<div class="des-input">
-											<input type="text">
+											<input type="text" value="1">
 										</div>
 										<div class="plus">+</div>
 									</div>
-									<span class="xg">信用卡支付送耳机</span>
+									<span class="xg">该商品最高可享12期分期免息</span>
 								</div>
 							</div>
 
@@ -163,7 +192,7 @@
 							</p>
 							<p class="xt">MacBook</p>
 							<p class="xt">MacBook Air</p>
-								<p class="xt">MacBook Pro</p>
+							<p class="xt">MacBook Pro</p>
 						</div>
 						<div class="rec-item">
 
@@ -174,10 +203,10 @@
 							<p class="xt">iPhone XR</p>
 							<p class="xt">iPhone X</p>
 						</div>
-						
+
 					</div>
 					<div class="hr-7"></div>
-					
+
 				</div>
 				<div class="rightArea">
 					<div class="des-infoContent">
@@ -188,11 +217,11 @@
 
 						<div class="info-img">
 							<ul>
-								<li><img src="img/apple/apple_info1.jpg" ></li>
-								<li><img src="img/apple/apple_info2.jpg" ></li>
-								<li><img src="img/apple/apple_info3.jpg" ></li>
-								<li><img src="img/apple/apple_info4.jpg" ></li>
-								<li><img src="img/apple/apple_info5.jpg" ></li>
+								<li><img src="img/apple/apple_info1.jpg"></li>
+								<li><img src="img/apple/apple_info2.jpg"></li>
+								<li><img src="img/apple/apple_info3.jpg"></li>
+								<li><img src="img/apple/apple_info4.jpg"></li>
+								<li><img src="img/apple/apple_info5.jpg"></li>
 							</ul>
 						</div>
 					</div>
@@ -327,5 +356,20 @@
 				</p>
 			</div>
 		</div>
+		<script src="js/user.js"></script>
+
+		<script>
+			var app = new Vue({
+				el: '#description',
+				data: {
+					details: {
+						Pic: 'img/apple/big_img.png',
+						Title: '苹果XS 256G内存免费送',
+						Price: '6666',
+					}
+				}
+			});
+		</script>
+		
 	</body>
 </html>
