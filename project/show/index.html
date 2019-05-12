@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>小程序H5以及APP</title>
+	</head>
+	<body>
+		<div class="main">
+			<div class="xiaochengxu">
+				<div class="warp">
+					<img src="img/1.jpg">
+					<img src="img/X1.png">
+					<img src="img/X2.png">
+					<img src="img/X3.png">
+					<img src="img/X4.png">
+					<img src="img/X5.png">
+					<img src="img/X6.png">
+				</div>
+			</div>
+			<div class="h5">
+				<div class="warp">
+					<img src="img/2.jpg">
+					<img src="img/H1.png">
+					<img src="img/H2.png">
+					<img src="img/H3.png">
+					<img src="img/H4.png">
+				</div>
+			</div>
+			<div class="app">
+				<div class="warp">
+					<img src="img/3.jpg">
+					<img src="img/A1.png">
+					<img src="img/A2.png">
+					<img src="img/A3.png">
+					<img src="img/A4.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="big" id="big">
+			<div class="content" id="content">
+				<img class="big-img" id="big-img" src="" alt="">
+				<div class="close" id="close"> X </div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var img = document.getElementsByTagName("img");
+			var big = document.getElementById("big");
+			var bimg = document.getElementById("big-img");
+			var content = document.getElementById("content");
+			var close = document.getElementById("close");
+
+			for (var i = 0; i < img.length; i++) {
+				img[i].onclick = function() {
+					big.style.display = "block";
+					bimg.src = this.src;
+					content.style.width = bimg.offsetWidth + 'px';
+					//console.log(bimg.offsetWidth)
+				}
+			}
+
+			close.onclick = function() {
+				big.style.display = "none";
+			}
+		</script>
+	</body>
+</html>
