@@ -31,8 +31,9 @@
 								<div class="user_panel" id="user_panel">
 									<div class="user_content">
 										<div class="user_top">
-											<a href="javascript:void(0)">
-												<img src="img/touxiang.jpg">
+											<a id="tximg" href="javascript:void(0)">
+												<img @click="upImg" src="img/touxiang.jpg">
+												<input id="tx" type="file" @change="uploadPhoto($event)" style="display: none;"/>
 											</a>
 											<div>张小三</div>
 										</div>
@@ -43,7 +44,7 @@
 								</div>
 							</li>
 							<li><a href="#0">会员中心</a></li>
-							<li><a href="https://lw1995.github.io/liwei.github.io/project/xiongmao/h5/#/">手机版</a></li>
+							<li><a href="#0">手机版</a></li>
 							<li><a href="#0">商家支持</a></li>
 							<li><a href="#0">购物车</a></li>
 							<li><a href="#0">收藏夹</a></li>
@@ -594,7 +595,7 @@
 						<a href="">运营服务</a>
 					</div>
 					<div class="footer-col">
-						<h3>手机版体验</h3>
+						<h3>手机APP下载</h3>
 						<div></div>
 
 					</div>
@@ -672,7 +673,7 @@
 				methods: {
 					search_click: function() {
 						if (this.search.length > 0) {
-							this.content = 'search?search=' + this.search;
+							this.content = 'search.html?search=' + this.search;
 						} else {
 							this.content = 'javascript:void(0)';
 						}
@@ -683,7 +684,7 @@
 				if (event.keyCode == 13) {
 					//console.log(1)
 					if (app.search.length > 0) {
-						window.location.href = 'search?search=' + app.search;
+						window.location.href = 'search.html?search=' + app.search;
 					} else {
 						app.content = 'javascript:void(0)';
 					}
