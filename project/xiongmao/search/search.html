@@ -5,16 +5,17 @@
 		<meta name="language" content="zh-CN">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
 		<meta name="renderer" content="webkit">
-		<link rel="stylesheet" type="text/css" href="css/shop.css" />
-		<link rel="stylesheet" type="text/css" href="css/myPagination.css" />
-		<link rel="stylesheet" type="text/css" href="css/footer.css" />
-		<link rel="stylesheet" type="text/css" href="css/public.css" />
-		<link rel="stylesheet" type="text/css" href="css/header.css" />
-		<link rel="stylesheet" type="text/css" href="css/loading.css" />
+		
+		<link rel="stylesheet" type="text/css" href="../css/shop.css" />
+		<link rel="stylesheet" type="text/css" href="../css/myPagination.css" />
+		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../css/header.css" />
+		<link rel="stylesheet" type="text/css" href="../css/loading.css" />
 		<title>商品搜索</title>
 		<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
-		<script src="js/jquery-3.3.1.js"></script>
-		<script src="js/myPagination.js"></script>
+		<script src="../js/jquery-3.3.1.js"></script>
+		<script src="../js/myPagination.js"></script>
 		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	</head>
@@ -348,7 +349,7 @@
 				methods: {
 					search_click: function() {
 						if (this.search.length > 0) {
-							this.content = 'search.html?search=' + this.search;
+							this.content = 'search?search=' + this.search;
 						} else {
 							this.content = 'javascript:void(0)';
 						}
@@ -359,7 +360,7 @@
 				if (event.keyCode == 13) {
 					//console.log(1)
 					if (app.search.length > 0) {
-						window.location.href = 'search.html?search=' + app.search;
+						window.location.href = 'search?search=' + app.search;
 					} else {
 						app.content = 'javascript:void(0)';
 					}

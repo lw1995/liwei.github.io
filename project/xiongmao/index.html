@@ -672,7 +672,7 @@
 				methods: {
 					search_click: function() {
 						if (this.search.length > 0) {
-							this.content = 'search.html?search=' + this.search;
+							this.content = 'search?search=' + this.search;
 						} else {
 							this.content = 'javascript:void(0)';
 						}
@@ -683,7 +683,7 @@
 				if (event.keyCode == 13) {
 					//console.log(1)
 					if (app.search.length > 0) {
-						window.location.href = 'search.html?search=' + app.search;
+						window.location.href = 'search?search=' + app.search;
 					} else {
 						app.content = 'javascript:void(0)';
 					}
